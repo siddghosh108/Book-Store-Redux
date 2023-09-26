@@ -16,7 +16,7 @@ function Form() {
     e.preventDefault();
     const id = books.length + 1;
     const newBook = {
-      bookId: `book-${id}`,
+      bookId: `item${id}`,
       title,
       author,
       category,
@@ -48,10 +48,16 @@ function Form() {
           required
         />
         <Dropdown
-          options={['Action', 'Science Fiction', 'Economy']}
+          options={[
+            'Action',
+            'Science Fiction',
+            'Economy',
+            'Fiction',
+            'Nonfiction',
+          ]}
           value={category}
           onChange={(selectedOption) => setCategory(selectedOption.value)}
-          placeholder="Select a category"
+          placeholder="Category"
           required
         />
         <button type="submit">ADD BOOK</button>
