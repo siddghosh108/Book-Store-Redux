@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Dropdown from 'react-dropdown';
+import { v4 as uuidv4 } from 'uuid';
 import 'react-dropdown/style.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { useDispatch } from 'react-redux';
+import { addTheBook } from '../redux/books/booksSlice';
 
 function Form() {
   const [title, setTitle] = useState('');
@@ -10,21 +11,21 @@ function Form() {
   const [category, setCategory] = useState('');
 
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.book.books);
 
   const submitHandler = (e) => {
+    const id = uuidv4();
+    dispatch(
+      addTheBook({
+        item_id: `book-id:${id}`,
+        title,
+        author,
+        category,
+      }),
+    );
     e.preventDefault();
-    const id = books.length + 1;
-    const newBook = {
-      bookId: `item${id}`,
-      title,
-      author,
-      category,
-    };
-    dispatch(addBook(newBook));
-    setTitle('');
     setAuthor('');
     setCategory('');
+    setTitle('');
   };
 
   return (
