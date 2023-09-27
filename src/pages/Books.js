@@ -1,4 +1,3 @@
-// Import statements remain the same
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import BookComp from '../components/BookComp';
