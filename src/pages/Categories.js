@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './styles/Categories.css';
 
 function Categories() {
   const status = useSelector((state) => state.category.status);

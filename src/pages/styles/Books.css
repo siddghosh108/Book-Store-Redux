@@ -1,0 +1,12 @@
+.books-container-book {
+  background-color: #fafafa;
+  padding-top: 3rem;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  width: 80%;
+  border: 1px solid #e8e8e8;
+}

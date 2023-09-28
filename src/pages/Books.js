@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchBooks, deleteTheBook } from '../redux/books/booksSlice';
 import Form from '../components/Form';
 import BookComp from '../components/BookComp';
+import './styles/Books.css';
 
 function Books() {
   const books = useSelector((state) => state.book.books);
@@ -23,7 +24,7 @@ function Books() {
 
   return (
     <>
-      <div className="books-container">
+      <div className="books-container-book">
         {bookItems.map((book) => (
           <BookComp
             key={book.id}
@@ -35,7 +36,6 @@ function Books() {
           />
         ))}
       </div>
-      <hr />
       <Form className="form" />
     </>
   );
