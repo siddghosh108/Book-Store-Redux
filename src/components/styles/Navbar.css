@@ -28,11 +28,17 @@
   gap: 40px;
 
   .nav-link {
+    opacity: 1;
     text-decoration: none;
-    font-family: Montserrat, sans-serif;
-    font-size: 0.813rem;
+    font-family: Roboto, sans-serif;
+    font-size: 0.850rem;
     letter-spacing: 1.9px;
-    color: #121212;
+    font-weight: 300;
+    color: #383737;
+  }
+
+  .selected-nav-link {
+    font-weight: bold;
   }
 }
 
