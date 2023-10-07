@@ -34,10 +34,10 @@
     font-size: 0.85rem;
     letter-spacing: 1.9px;
     font-weight: 300;
-    color: #383737;
+    color: #8f8b8b;
   }
 
-  .selected-nav-link {
+  .active-link-bold {
     font-weight: bold;
   }
 }

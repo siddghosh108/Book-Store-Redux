@@ -25,7 +25,7 @@ function Navbar() {
           },
         ].map((link) => (
           <li key={link.id}>
-            <NavLink className="nav-link" to={link.path}>
+            <NavLink className="nav-link" activeClassName="active-link-bold" to={link.path}>
               {link.name}
             </NavLink>
           </li>
