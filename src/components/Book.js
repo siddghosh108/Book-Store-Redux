@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles/Book.css';
 
 function Book(props) {
   const { book } = props;
@@ -7,7 +8,7 @@ function Book(props) {
     title, author, category,
   } = book;
   return (
-    <div className="books-container">
+    <div className="books-containerr">
       <div className="book-container">
         <h3 className="book-category">{category}</h3>
         <h2 className="book-title">{title}</h2>
